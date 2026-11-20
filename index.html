@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valentix · Portafolio</title>
+<meta name="description" content="Portafolio de Valentina Gomes Rojas, estudiante de Diseño Gráfico: diseño editorial, narrativa visual y UI/UX.">
+<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--negro:#000;--panel:#121212;--linea:rgba(255,255,255,.14);--lila:#ad7ad2;--proy:#34253f;--banda:#453154;--gris:#bdbdbd;--cinzel:"Cinzel",Georgia,serif;--play:"Playfair Display",Georgia,serif;--sans:"Space Grotesk",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--negro);color:#fff;font-family:var(--sans);line-height:1.6}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4,p,dl,dd,figure,ul{margin:0;padding:0}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--lila);outline-offset:3px}
+
+/* Encabezado */
+.hero{position:relative;overflow:hidden;min-height:560px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:110px 20px 70px;text-align:center}
+.hero>*{position:relative;z-index:1}
+.deco{position:absolute!important;z-index:0!important;pointer-events:none;line-height:1}
+.aro{border:1px solid #161616;border-radius:50%}
+.logo{position:relative;width:148px}
+.logo img{width:148px}
+.logo i{position:absolute;top:0;width:18px;height:18px;border-radius:50%;background:#fff}
+.nombre{font-family:var(--play);font-weight:800;font-size:clamp(3.2rem,12vw,8.5rem);letter-spacing:.03em;line-height:1;filter:blur(6px);margin-top:20px}
+.nombre span{color:rgba(173,122,210,.7)}
+.lema{font-family:var(--play);font-style:italic;font-size:clamp(1.3rem,3.2vw,2.3rem);letter-spacing:.08em;color:var(--lila)}
+.pildora{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:6px 16px;border:1px solid #333;background:#080808;font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#ddd}
+.pildora b{color:var(--lila);font-weight:400}
+
+/* Banda en movimiento */
+.banda{overflow:hidden;background:var(--banda);padding:12px 0}
+.banda div{display:flex;width:max-content;animation:desfile 32s linear infinite}
+.banda span{font-family:var(--cinzel);font-weight:700;font-size:clamp(1rem,2vw,1.65rem);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;padding-right:2rem}
+.banda span::after{content:"|";margin-left:2rem;font-weight:400;opacity:.6}
+@keyframes desfile{to{transform:translateX(-50%)}}
+
+/* Perfil */
+.perfil,.proyectos{padding:64px 20px}
+.perfil h2{font-family:var(--cinzel);font-weight:700;text-transform:uppercase;font-size:clamp(1.9rem,5vw,3.75rem);line-height:1.1;padding-bottom:36px;border-bottom:1px solid var(--linea)}
+.perfil h2 em{font-family:var(--play);font-weight:400;display:block}
+.perfil-grid{display:grid;gap:40px;margin-top:56px;align-items:start}
+.marco{position:relative;background:var(--panel);border:1px solid #222;padding:12px}
+.marco img{width:100%}
+.cinta{position:absolute;width:112px;height:28px;background:rgba(173,122,210,.45)}
+.c1{top:-14px;left:24px;transform:rotate(-2deg)}.c2{top:-14px;right:24px;transform:rotate(2deg)}.c3{bottom:-14px;left:50%;transform:translateX(-30%)}
+.cita{border-left:2px solid var(--lila);padding-left:24px;font-family:var(--play);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.5;margin-bottom:24px}
+.texto p{color:#ddd;font-size:1rem;line-height:1.65;padding-left:24px;border-left:1px solid #222;margin-bottom:20px}
+.texto p+p{font-size:.88rem;font-weight:500}
+.titulo-perfil{display:flex;align-items:center;gap:20px;margin:40px 0 24px;padding-top:24px;border-top:1px solid var(--linea);font-family:var(--cinzel);font-weight:400;font-size:clamp(1.5rem,3vw,2.25rem);color:var(--lila);text-transform:uppercase;letter-spacing:.04em}
+.titulo-perfil::after{content:"";flex:1;height:1px;background:var(--linea)}
+.tarjeta{position:relative;background:var(--panel);border:1px solid var(--linea);padding:24px;margin-bottom:24px}
+.tarjeta h4{font-family:var(--cinzel);font-weight:700;font-size:1.15rem;text-transform:uppercase;margin-bottom:10px}
+.tarjeta h4 i{font-family:var(--play);font-weight:400;color:var(--lila);font-size:.85em;margin-right:10px;text-transform:none}
+.tarjeta p{font-size:.88rem;color:var(--gris);margin-bottom:14px}
+.etiquetas{display:flex;flex-wrap:wrap;gap:8px}
+.etiquetas li{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border:1px solid #333;color:#aaa}
+.etiquetas .on{border-color:#5a3d78;color:var(--lila);background:#1a1222}
+.t1{min-height:205px}.t1 .cinta{top:-14px;right:-12px;transform:rotate(4deg)}
+
+/* Proyectos */
+.proyectos{background:var(--proy)}
+.proyectos>h2{font-family:var(--play);font-style:italic;font-weight:400;text-transform:uppercase;font-size:clamp(2.2rem,6vw,4rem);padding-bottom:28px;border-bottom:1px solid var(--linea);margin-bottom:48px}
+.proyecto{margin-bottom:64px}
+.cab{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:center;margin-bottom:24px}
+.cab .num{grid-row:1/3;font-family:var(--play);font-style:italic;font-weight:700;font-size:clamp(2.4rem,5vw,3.6rem);color:var(--lila);line-height:1}
+.cab h3{font-family:var(--cinzel);font-weight:700;text-transform:uppercase;font-size:clamp(1.4rem,3.4vw,2.8rem);line-height:1.1}
+.cab p{grid-column:2;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lila);margin-top:6px}
+.caja{background:var(--panel);border:1px solid var(--linea)}
+.p1{display:grid}
+.p1 .izq{padding:16px}
+.p1 .izq p{margin-top:20px;padding:20px 16px 4px;border-top:1px solid var(--linea);font-family:var(--play);font-style:italic;font-size:1.05rem;line-height:1.45;color:#ddd}
+.ficha{padding:24px;border-top:1px solid var(--linea)}
+.ficha h4{font-family:var(--cinzel);font-weight:700;font-size:1.2rem;text-transform:uppercase;color:var(--lila);margin-bottom:20px}
+.ficha dt{font-size:.75rem;font-weight:700;color:var(--lila);margin-top:16px}
+.ficha dd{font-size:.85rem;color:var(--gris)}
+.p2{display:grid;gap:24px}
+.morada{background:var(--lila);color:#000;border:1px solid #8b5fb0;padding:28px 24px;margin-bottom:24px}
+.morada p{font-family:var(--cinzel);font-weight:700;font-size:1.25rem;text-transform:uppercase;line-height:1.3;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,.25)}
+.nota{padding:24px}
+.nota q{display:block;font-family:var(--play);font-style:italic;font-size:.95rem;line-height:1.5;color:#ddd;quotes:none;margin-bottom:20px}
+.nota p{font-size:.72rem;color:#999}
+.boletin{display:grid;gap:24px;padding:24px;align-items:center}
+.boletin q{font-family:var(--play);font-style:italic;font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.45;quotes:none}
+.paginas{margin-top:24px;width:100%}
+.p3q{padding:24px;font-family:var(--play);font-style:italic;font-size:clamp(1rem,2vw,1.4rem);line-height:1.5;background:var(--panel);border:1px solid var(--linea)}
+.uni{display:grid;gap:32px;margin-top:32px}
+.celulares{display:flex;align-items:flex-end;gap:24px}
+.celulares img:first-child{width:min(100%,403px)}.celulares img+img{width:110px}
+.pantallas{display:grid;gap:24px;align-content:start}
+
+/* Pie */
+.pie{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:32px 20px;margin:0;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-top:1px solid #1a1a1a}
+
+@media(min-width:900px){
+.hero{min-height:765px;padding-top:190px}
+.perfil,.proyectos{padding:96px 64px}
+.perfil-grid{grid-template-columns:443fr 645fr;gap:64px}
+.p1{grid-template-columns:758fr 394fr}
+.p1 .izq{padding:66px 12px 24px}
+.ficha{border-top:0;border-left:1px solid var(--linea);padding:32px}
+.p2{grid-template-columns:362fr 758fr}
+.boletin{grid-template-columns:367fr 1fr;gap:24px 24px}
+.uni{grid-template-columns:minmax(0,537px) minmax(0,1fr);gap:48px}
+.pie{padding:32px 64px}
+}
+@media(prefers-reduced-motion:reduce){.banda div{animation:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <span class="deco aro" style="left:-190px;top:-190px;width:520px;height:520px" aria-hidden="true"></span>
+  <span class="deco aro" style="right:6%;bottom:40px;width:275px;height:275px" aria-hidden="true"></span>
+  <span class="deco" style="left:4%;top:95px;color:#4a3563;font-size:28px" aria-hidden="true">✦</span>
+  <span class="deco" style="left:7%;bottom:110px;color:#4a3563;font-size:26px" aria-hidden="true">✧</span>
+  <span class="deco" style="right:8%;top:75px;color:#46305f;font-size:40px" aria-hidden="true">★</span>
+  <span class="deco" style="right:7%;top:380px;color:#555;font-size:20px" aria-hidden="true">✦</span>
+  <span class="deco" style="right:12%;bottom:120px;color:#555;font-size:14px" aria-hidden="true">★</span>
+  <svg class="deco" style="left:68%;top:215px" width="82" height="76" viewBox="0 0 82 76" fill="none" stroke="#2a2a2a" stroke-width="1.5" aria-hidden="true"><path d="M41 22C30 0 6 2 4 22c-1 14 14 18 37 16 23 2 38-2 37-16C76 2 52 0 41 22Z"/><path d="M41 40C28 44 14 56 20 70c8 8 18-6 21-22 3 16 13 30 21 22 6-14-8-26-21-30Z"/></svg>
+  <div class="logo">
+    <img src="img/logo.png" alt="Logo de Valentix: una U con un lazo en forma de hoja" width="148" height="110">
+    <i style="left:-4px" aria-hidden="true"></i><i style="left:82px" aria-hidden="true"></i>
+    <span class="deco" style="left:162px;top:-60px;color:var(--lila);font-size:18px" aria-hidden="true">✦</span>
+  </div>
+  <h1 class="nombre">VALENT<span>IX</span></h1>
+  <p class="lema">«De la historia al diseño»</p>
+  <p class="pildora">Universo visual <b>✦</b> Experimentación narrativa</p>
+</header>
+
+<div class="banda" aria-hidden="true">
+  <div>
+    <span>De la historia al diseño</span><span>Ideas que cobran vida</span><span>Un universo de creación</span>
+    <span>De la historia al diseño</span><span>Ideas que cobran vida</span><span>Un universo de creación</span>
+  </div>
+</div>
+
+<main>
+<section class="perfil" aria-labelledby="t-perfil">
+  <h2 id="t-perfil">El diario creativo de <em>VALENTINA.</em></h2>
+  <div class="perfil-grid">
+    <figure class="marco">
+      <span class="cinta c1"></span><span class="cinta c2"></span><span class="cinta c3"></span>
+      <img src="img/foto-valentina.jpg" alt="Retrato de Valentina: cabello largo y oscuro, labios en tono vino" width="411" height="506">
+    </figure>
+    <div>
+      <div class="texto">
+        <blockquote class="cita" style="margin-inline:0">«Valentix es mi marca personal como diseñadora. Nace de mi interés por el diseño como una forma de contar historias y generar emociones.»</blockquote>
+        <p>Soy Valentina Gomes Rojas, estudiante de Diseño Gráfico. Me interesa explorar las posibilidades del diseño a través de las imágenes, la composición, la tipografía y las experiencias digitales. Disfruto experimentar con diferentes lenguajes visuales, contar historias y transformar ideas en propuestas gráficas con identidad propia.</p>
+        <p>Este espacio reúne mis proyectos, experimentos y procesos creativos. Es una ventana viva a mi manera de ver y hacer diseño editorial y digital.</p>
+      </div>
+      <h3 class="titulo-perfil">Perfil creativo</h3>
+      <article class="tarjeta t1">
+        <span class="cinta"></span>
+        <h4><i>01.</i>Áreas de enfoque &amp; intereses</h4>
+        <p>Diseño editorial de libros y publicaciones independientes, experimentación fanzine, sistemas reticulares y diseño de interfaces UI/UX accesibles y humanas.</p>
+        <ul class="etiquetas"><li>Diseño editorial</li><li>Interfaces UI/UX</li><li>Narrativa visual</li><li>Dirección de arte</li></ul>
+      </article>
+      <article class="tarjeta">
+        <h4><i>02.</i>Habilidades &amp; técnicas</h4>
+        <p>Dominio de retículas modulares complejas, jerarquías microtipográficas, producción física editorial, maquetación y prototipado interactivo.</p>
+        <ul class="etiquetas"><li>Tipografía</li><li>Risografía &amp; duotono</li><li>Arquitectura de información</li><li>Design systems</li></ul>
+      </article>
+      <article class="tarjeta">
+        <h4><i>03.</i>Herramientas &amp; software</h4>
+        <ul class="etiquetas"><li class="on">Adobe InDesign</li><li>Adobe Illustrator</li><li>Adobe Photoshop</li><li class="on">Figma</li><li>Procreate</li><li>Técnicas analógicas</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="proyectos" aria-labelledby="t-proy">
+  <h2 id="t-proy">Mis proyectos :</h2>
+
+  <article class="proyecto">
+    <div class="cab"><span class="num" aria-hidden="true">01/</span><h3>Rediseño de portada musical — The Marías</h3><p>«Diseño para escuchar y mirar»</p></div>
+    <div class="caja p1">
+      <div class="izq">
+        <img src="img/proyecto-1-portada.jpg" alt="Portada rediseñada del álbum Submarine de The Marías: manos azules translúcidas rodean a una figura con el cabello flotando" width="717" height="715" loading="lazy">
+        <p>«Un ejercicio de rediseño de portada musical inspirado en The Marías. Una exploración visual en la que trabajo la composición, la imagen y la identidad gráfica para construir una propuesta que acompañe la experiencia musical.»</p>
+      </div>
+      <div class="ficha">
+        <h4>«Diseño para escuchar y mirar»</h4>
+        <dl>
+          <dt>Concepto Sonoro-Visual:</dt><dd>Traducción de atmósferas envolventes y cinematográficas en texturas fotográficas monocromáticas y acentos morados (#AD7AD2).</dd>
+          <dt>Tipografía Empleada:</dt><dd>Playfair Display para titulares contemplativos contrastada con Space Grotesk técnica.</dd>
+          <dt>Soporte Físico:</dt><dd>Funda de cartón prensado con barniz selectivo mate y libreto interior desplegable.</dd>
+        </dl>
+      </div>
+    </div>
+  </article>
+
+  <article class="proyecto">
+    <div class="cab"><span class="num" aria-hidden="true">02/</span><h3>Diseño editorial — Boletín informativo</h3><p>«Historias que toman forma»</p></div>
+    <div class="p2">
+      <div>
+        <div class="morada"><p>«Organización de contenidos y narrativa tipográfica.»</p></div>
+        <div class="caja nota">
+          <q>«El boletín no es solo un transmisor de noticias: es una pieza tangible de diseño editorial concebida para permanecer.»</q>
+          <p>Proyecto académico enfocado en el dominio técnico de InDesign, espaciados microtipográficos y ritmo visual secuencial.</p>
+        </div>
+      </div>
+      <div class="caja boletin">
+        <img src="img/proyecto-2-boletin.jpg" alt="Portada del boletín en blanco y negro: un faraón de piedra y la pregunta «¿Qué es verdad después de la muerte?»" width="367" height="521" loading="lazy">
+        <q>«Un proyecto académico de diseño editorial en el que exploro la organización de contenidos, la composición visual y la relación entre tipografía e imagen para desarrollar un boletín informativo.»</q>
+      </div>
+    </div>
+    <img class="paginas" src="img/proyecto-2-paginas.jpg" alt="Páginas interiores del boletín: «Creencias funerarias en el Antiguo Egipto», con un sarcófago, índice numerado y texto a dos columnas" width="1152" height="813" loading="lazy">
+  </article>
+
+  <article class="proyecto" style="margin-bottom:0">
+    <div class="cab"><span class="num" aria-hidden="true">03/</span><h3>UniPlata — Diseño UI/UX</h3><p>«Tus finanzas, en tus manos»</p></div>
+    <p class="p3q">«UniPlata es una propuesta de aplicación móvil enfocada en la organización de las finanzas personales de estudiantes universitarios. El proyecto explora cómo una interfaz puede facilitar el registro, la consulta y el seguimiento del dinero.»</p>
+    <div class="uni">
+      <div class="celulares">
+        <img src="img/uniplata-bienvenida.png" alt="Pantalla de bienvenida de UniPlata: «Tu dinero, bajo control»" width="478" height="960" loading="lazy">
+        <img src="img/uniplata-celular.png" alt="Pantalla de inicio de UniPlata en el celular, con el dinero disponible y los presupuestos" width="138" height="274" loading="lazy">
+      </div>
+      <div class="pantallas">
+        <img src="img/uniplata-escritorio.png" alt="Versión de escritorio de UniPlata: resumen del día, ciclo mensual, consumo semanal y últimos movimientos" width="689" height="550" loading="lazy">
+        <img src="img/uniplata-pantallas.png" alt="Cuatro pantallas del celular: movimientos, plan mensual, presupuesto y perfil" width="591" height="276" loading="lazy">
+      </div>
+    </div>
+  </article>
+</section>
+</main>
+
+<footer class="pie">
+  <p>© 2026 Valentix — Valentina Gomes Rojas. Todos los derechos reservados.</p>
+  <p>De la historia al diseño // Portafolio personal</p>
+</footer>
+</body>
+</html>

@@ -1,2 +1,11 @@
-# Valentix
-¡Hola! Soy estudiante de Diseño Gráfico, una persona curiosa, creativa y llena de ideas. Me gusta explorar, experimentar y encontrar formas diferentes de transformar lo que imagino en algo visual.  Disfruto combinar colores, formas, conceptos y estilos para crear proyectos que transmitan emociones, cuenten historias y tengan una identidad propia. 
+# Valentix · Portafolio
+
+Sitio web personal (un solo `index.html`) con las imágenes en la carpeta `img/`.
+
+## Publicar en GitHub Pages
+1. Crea un repositorio nuevo en GitHub.
+2. Descomprime el zip y sube **el contenido** (`index.html`, carpeta `img`, `README.md`, `LICENSE`, `.gitignore`, `.nojekyll`) con *Add file → Upload files*.
+3. Ve a **Settings → Pages**, elige *Deploy from a branch*, rama `main`, carpeta `/ (root)` y guarda.
+4. En unos minutos tu página estará en `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`.
+
+Los nombres de las imágenes distinguen mayúsculas y minúsculas: no los cambies.
